@@ -1,0 +1,2 @@
+# LP
+Loginis programavimas
