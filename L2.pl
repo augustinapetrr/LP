@@ -88,12 +88,13 @@ dalyba(Dalinys, Daliklis, Dalmuo) :-
 dalyba(Dalinys, Daliklis, Dalmuo) :-
     Dalinys < 0, Daliklis > 0,
     rekursyviDalyba(-Dalinys, Daliklis, 0, LaikinasDalmuo),
-    Dalmuo is -LaikinasDalmuo.
+    Dalmuo is -LaikinasDalmuo - 1.
 
 /* neigiamas div neigiamas = teigiamas */
 dalyba(Dalinys, Daliklis, Dalmuo) :-
     Dalinys < 0, Daliklis < 0,
-    rekursyviDalyba(-Dalinys, -Daliklis, 0, Dalmuo).
+    rekursyviDalyba(-Dalinys, -Daliklis, 0, LaikinasDalmuo),
+    Dalmuo is LaikinasDalmuo + 1.
 
 /* nulis div daliklis = nulis */
 dalyba(0, Daliklis, Dalmuo) :-
